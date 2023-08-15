@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Restaurant</title>
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="img\favicon.ico" type="image/x-icon"> -->
+
+    <!-- Global font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Tilt+Prism&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" class="css">
+
+    <!-- Fontawesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tektur', cursive;
+        }
+
+
+        body {
+            background-color: rgba(197, 192, 192, 0.493);
+            background-image: url('img/restaurant-background.jpg');
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .bg-img {
+            background-image: url('img/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg');
+        }
+
+        .loader {
+            height: 2px;
+            width: 100vw;
+            background-color: red;
+            animation: load 1.2s forwards;
+        }
+
+        .about-container {
+            position: relative;
+            height: 60vh;
+            width: 80vw;
+            margin: auto;
+            box-shadow: 0 0 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: grey;
+            overflow: hidden;
+        }
+
+        .head {
+            font-size: 30px;
+            position: absolute;
+            top: 10px;
+            left: auto;
+        }
+
+        .about {
+            display: flex;
+            flex-direction: row-reverse;
+            position: absolute;
+            top: 80px;
+            left: auto;
+        }
+
+        .image img {
+            border-radius: 65px 20px;
+            padding: 0 20px;
+            height: 280px;
+            width: auto;
+        }
+
+        .is-animated {
+            font-weight: bold;
+            padding: 0;
+            position: relative;
+        }
+
+        .is-animated p span {
+            display: block;
+            padding: 0 10px;
+            width: 600px;
+        }
+
+        .text {
+            font-size: 150%;
+            float: left;
+            overflow: hidden;
+        }
+
+        .text p span {
+            margin-left: -100%;
+            animation-name: expandValue;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        .text p span #name {
+            animation-name: expandValue;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes expandProperty {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 200px;
+            }
+        }
+
+        @keyframes expandValue {
+            from {
+                margin-left: -200px;
+            }
+
+            to {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width:1165px) {
+            .text p span {
+                display: grid;
+                grid-template-columns: 400px 1fr;
+            }
+        }
+
+        @media screen and (max-width:916px) {
+            .text p span {
+                display: grid;
+                grid-template-columns: 300px 1fr;
+            }
+
+            .about-container {
+                height: 75vh;
+            }
+        }
+
+        @media screen and (max-width:783px) {
+            .text p span {
+                display: grid;
+                grid-template-columns: 250px 1fr;
+            }
+
+            .about-container {
+                height: 75vh;
+            }
+        }
+
+        @media screen and (max-width:783px) {
+            .image img {
+                height: 200px;
+            }
+        }
+
+        @media screen and (max-width:636px) {
+            .image img {
+                height: 150px;
+            }
+
+            .text {
+                font-size: 120%;
+            }
+
+            .about-container {
+                height: 50vh;
+            }
+        }
+
+        @media screen and (max-width:568px) {
+            .image img {
+                height: 150px;
+            }
+
+            .text {
+                font-size: 80%;
+            }
+
+            .text p span {
+                display: grid;
+                grid-template-columns: 200px 1fr 1fr;
+            }
+
+            .about-container {
+                height: 50vh;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .text p span {
+                display: grid;
+                grid-template-columns: 150px 1fr 1fr;
+            }
+
+            .about-container {
+                height: 55vh;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg-img"></div>
+
+    <div class="loader"></div>
+
+    <nav>
+        <div class="shopping">
+            <img src="img/svg-icon.svg" alt="">
+        </div>
+
+        <ul>
+            <span>
+                <li><a href="index.html">Home</a></li>
+            </span>
+            <span>
+                <li><a href="about.html">About</a></li>
+            </span>
+            <span>
+                <li><a href="contact.html">Contact</a></li>
+            </span>
+        </ul>
+
+        <div class="card">
+            <h1>Your Order</h1>
+            <ul class="listCard"></ul>
+            <div class="checkout">
+                <div class="total">0&#8377</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="about-container">
+
+        <div class="about">
+            <div class="text is-animated">
+                <p><span>"I am currently pursuing B.Tech degree in Computer Science from <br>Indian Institute of
+                        Information Technology, Sri City"</span></p>
+                <p id="name">-Abhishek Sahay</p>
+            </div>
+            <div class="image">
+                <img src="img/my-img.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        copyright &copy: All rights reserved.
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script>
+
+    </script>
+
+</body>
+
+</html>

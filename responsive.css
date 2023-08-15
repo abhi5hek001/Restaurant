@@ -1,0 +1,43 @@
+@media screen and (max-width: 1200px) {
+    .slide-container {
+        width: 70vw;
+    }
+
+    .menu-items {
+        height: 250vh;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-items {
+        height: 300vh;
+    }
+}
+
+@media screen and (max-width: 794px) {
+    .list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .menu-items {
+        height: 720vh;
+    }
+}
+
+@media screen and (max-width: 734px) {
+    .menu-items {
+        height: 580vh;
+    }
+
+    .card {
+        width: 300px
+    }
+
+    .active .card {
+        left: calc(100% - 300px);
+    }
+}

@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Josefin+Sans&family=Lugrasimo&family=Oswald:wght@500&family=Roboto+Condensed&family=Roboto:ital@0;1&family=Tektur&family=Tilt+Prism&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tektur', cursive;
+}
+
+
+body {
+    background-color: rgba(197, 192, 192, 0.493);
+    background-image: url('img/restaurant-background.jpg');
+    overflow-x: hidden;
+}
+
+.bg-img {
+    background-image: url('img/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg');
+    overflow-x: hidden;
+}
+
+.loader {
+    height: 2px;
+    width: 100vw;
+    background-color: red;
+    animation: load 1.2s forwards;
+}
+
+nav {
+    height: 100px;
+}
+
+nav ul {
+    background-color: grey;
+    color: white;
+    display: flex;
+    font-weight: bolder;
+}
+
+nav ul span li {
+    padding: 0 20px;
+}
+
+nav ul span li {
+    margin: 10px 18px;
+    padding: 5px 12px;
+    font-family: 'Tektur', cursive;
+    list-style: none;
+}
+
+nav ul span li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li:hover a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.685);
+    cursor: pointer;
+}
+
+nav .shopping {
+    position: relative;
+    text-align: right;
+    height: 0;
+    cursor: pointer;
+}
+
+nav .shopping img {
+    width: 40px;
+    position: absolute;
+    top: 7px;
+    left: 90%;
+}
+
+.menu-items h1 {
+    font-family: 'Tektur', cursive;
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(88, 44, 192);
+}
+
+.starter {
+    position: absolute;
+    top: 10vh;
+    left: 60px;
+}
+
+.main-course {
+    position: absolute;
+    top: 180vh;
+    right: 40px;
+}
+
+.fast-food {
+    position: absolute;
+    top: 350vh;
+    left: 60px;
+}
+
+.shakes {
+    position: absolute;
+    top: 520vh;
+    right: 40px;
+}
+
+.ice-cream {
+    position: absolute;
+    top: 690vh;
+    left: 60px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.card {
+    position: sticky;
+    top: 0;
+    left: 270%;
+    width: 500px;
+    background-color: #453e3b;
+    height: 85vh;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    overflow: auto;
+}
+
+.card h1 {
+    color: #e8bc0e;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .checkout {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card .checkout div {
+    background-color: #e8bc0e;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card .checkout div:nth-child(2) {
+    background-color: #1c1f25;
+    color: #fff;
+}
+
+.active .card {
+    left: calc(100% - 500px);
+}
+
+/* .active .container {
+    transform: translateX(-200px);
+} */
+
+.list .item {
+    text-align: center;
+    background-color: #dce0e1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+
+    /* Very Important */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.list .item:hover {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.list .item img {
+    width: 25%;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.61));
+}
+
+.list .item .title {
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.list .item .price {
+    margin: 10px;
+}
+
+.list .item button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+.listCard {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+.listCard li:hover div {
+    background-color: grey;
+}
+
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: rgb(0, 0, 0);
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img {
+    width: 90%;
+}
+
+.listCard button {
+    width: 20px;
+    background-color: rgb(255, 136, 0);
+    border: none;
+}
+
+.listCard .count {
+    margin: 0 10px;
+}
+
+.price {
+    width: 50px;
+}
+
+.slide-container {
+    /* for arrow to be absolute, isko relative karna padega */
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: 85vw;
+}
+
+.slide {
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    color: black;
+    background-color: rgba(238, 232, 232, 0.575);
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.caption {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Tektur', cursive;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.37);
+    padding: 10px 0;
+}
+
+.slide {
+    /* display none to add slideshow to the slider */
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+.menu-items {
+    height: 250vh;
+    width: 400px;
+    margin: 16px 18px;
+    background-color: rgba(120, 109, 138, 0);
+    display: block;
+    overflow: hidden;
+}
+
+.menu-items:hover {
+    box-shadow: rgba(50, 50, 93, 0.39) 0px 50px 100px -20px, rgba(0, 0, 0, 0.397) 0px 30px 60px -30px, rgba(10, 37, 64, 0.39) 0px -2px 6px 0px inset;
+}
+
+.menu-items span {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    font-family: 'Tektur', cursive;
+    font-weight: bolder;
+}
+
+.list-items {
+    font-family: 'Tektur', cursive;
+    margin-left: 5px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.review {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.review img {
+    width: 100%;
+    height: 165%;
+    box-shadow: 0 20px 20px black;
+    border: 2px solid black;
+}
+
+.review span {
+    font-family: 'Tektur', cursive;
+    color: white;
+}
+
+.review span p {
+    padding: 160px 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 0;
+}
+
+footer {
+    font-size: 18px;
+    background-color: grey;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    z-index: 3;
+}
+
+@keyframes load {
+    0% {
+        width: 0vw;
+    }
+
+    50% {
+        width: 70vw;
+    }
+
+    70% {
+        width: 90vw;
+    }
+
+    100% {
+        width: 100vw;
+    }
+
+}
